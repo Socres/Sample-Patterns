@@ -6,7 +6,7 @@
 
     class Program
     {
-        private static void Main(string[] args)
+        private static void Main()
         {
             var numberOfProductsString = "Unknown";
             while (!string.IsNullOrEmpty(numberOfProductsString))

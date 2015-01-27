@@ -5,7 +5,7 @@
 
     class Program
     {
-        static void Main(string[] args)
+        static void Main()
         {
             var b1 = LoadBalancer.Instance;
             var b2 = LoadBalancer.Instance;

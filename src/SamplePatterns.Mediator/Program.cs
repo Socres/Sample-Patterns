@@ -6,7 +6,7 @@
 
     class Program
     {
-        static void Main(string[] args)
+        static void Main()
         {
             var tower = new Tower();
 
@@ -22,6 +22,10 @@
             {
                 flight1.Climb(height);
             }
+            Console.WriteLine("**********");
+            Console.WriteLine("{0} altitude: {1}", flight1.CallSign, flight1.Altitude);
+            Console.WriteLine("{0} altitude: {1}", flight2.CallSign, flight2.Altitude);
+            Console.WriteLine("{0} altitude: {1}", flight3.CallSign, flight3.Altitude);
             Console.ReadLine();
         }
     }
