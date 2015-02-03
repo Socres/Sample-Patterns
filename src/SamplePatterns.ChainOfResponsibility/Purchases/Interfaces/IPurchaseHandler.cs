@@ -7,7 +7,7 @@
         /// </summary>
         /// <param name="purchase">The purchase.</param>
         /// <returns></returns>
-        ApprovalResponse Approve(IPurchase purchase);
+        ApprovalResponse Approve(Purchase purchase);
 
         /// <summary>
         /// Registers the next purchase handler.

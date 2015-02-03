@@ -18,7 +18,7 @@
         /// </summary>
         /// <param name="purchase">The purchase.</param>
         /// <returns></returns>
-        public ApprovalResponse Approve(IPurchase purchase)
+        public ApprovalResponse Approve(Purchase purchase)
         {
             var response = _approver.Approve(purchase);
 

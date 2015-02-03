@@ -2,7 +2,7 @@
 {
     using SamplePatterns.ChainOfResponsibility.Purchases.Interfaces;
 
-    public class Purchase: IPurchase
+    public class Purchase
     {
         public double Amount { get; private set; }
 

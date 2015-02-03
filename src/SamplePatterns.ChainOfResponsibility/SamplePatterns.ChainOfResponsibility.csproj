@@ -49,7 +49,6 @@
     <Compile Include="Purchases\Approvers\ManagingDirector.cs" />
     <Compile Include="Purchases\Approvers\PurchaseApprover.cs" />
     <Compile Include="Purchases\EndOfChainPurchaseHandler.cs" />
-    <Compile Include="Purchases\Interfaces\IPurchase.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Purchases\Interfaces\IPurchaseApprover.cs" />

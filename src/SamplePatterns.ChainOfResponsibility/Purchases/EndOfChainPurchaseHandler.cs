@@ -30,7 +30,7 @@
         /// </summary>
         /// <param name="purchase">The purchase.</param>
         /// <returns></returns>
-        public ApprovalResponse Approve(IPurchase purchase)
+        public ApprovalResponse Approve(Purchase purchase)
         {
             return new ApprovalResponse(this, ApprovalStatus.Denied);
         }
