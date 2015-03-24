@@ -24,7 +24,7 @@
         /// <returns>An instance of the IMachine</returns>
         public IMachine CreateInstance(string description)
         {
-            var type = GetTypeToCreate(description.ToLower());
+            var type = GetTypeToCreate(description);
 
             if (type == null)
             {
@@ -43,7 +43,7 @@
         {
             return 
                 (from machine in _machines 
-                 where machine.Key.Contains(machineName) 
+                 where machine.Key.Equals(machineName, StringComparison.InvariantCultureIgnoreCase) 
                  select _machines[machine.Key]
                 ).FirstOrDefault();
         }
@@ -58,7 +58,7 @@
             foreach (var type in 
                 typesInThisAssembly.Where(type => type.GetInterface(typeof(IMachine).ToString()) != null))
             {
-                _machines.Add(type.Name.ToLower(), type);
+                _machines.Add(type.Name, type);
             }
         }
     }

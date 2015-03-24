@@ -10,16 +10,19 @@
         {
             var machineFactory = LoadFactory();
 
-            Console.WriteLine("Enter machine name:");
-            var machineName = Console.ReadLine();
+            var machineName = "unkown";
+            while (!string.IsNullOrEmpty(machineName))
+            {
+                Console.WriteLine("Enter machine name:");
+                machineName = Console.ReadLine();
 
-            var machine = machineFactory.CreateInstance(machineName);
+                var machine = machineFactory.CreateInstance(machineName);
 
-            Console.WriteLine("Machine created: " + machine.Name);
-            Console.WriteLine(machine.TurnOn());
-            Console.WriteLine(machine.TurnOff());
-
-            Console.ReadLine();
+                Console.WriteLine("Machine created: " + machine.Name);
+                Console.WriteLine(machine.TurnOn());
+                Console.WriteLine(machine.TurnOff());
+                Console.WriteLine("*********");
+            }
         }
 
         private static IMachineFactory LoadFactory()

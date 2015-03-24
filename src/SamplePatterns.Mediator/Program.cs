@@ -14,19 +14,22 @@
             var flight2 = new Boeing("WS203", tower);
             var flight3 = new Fokker("AC602", tower);
 
-            Console.WriteLine("Enter start height:");
-            var heightString = Console.ReadLine();
-            Console.WriteLine("**********");
-            int height;
-            if (int.TryParse(heightString, out height))
+            var heightString = "0";
+            while (!string.IsNullOrEmpty(heightString))
             {
-                flight1.Climb(height);
+                Console.WriteLine("Enter start height:");
+                heightString = Console.ReadLine();
+                Console.WriteLine("**********");
+                int height;
+                if (int.TryParse(heightString, out height))
+                {
+                    flight1.Climb(height);
+                    Console.WriteLine("{0} altitude: {1}", flight1.CallSign, flight1.Altitude);
+                    Console.WriteLine("{0} altitude: {1}", flight2.CallSign, flight2.Altitude);
+                    Console.WriteLine("{0} altitude: {1}", flight3.CallSign, flight3.Altitude);
+                    Console.WriteLine("**********");
+                }
             }
-            Console.WriteLine("**********");
-            Console.WriteLine("{0} altitude: {1}", flight1.CallSign, flight1.Altitude);
-            Console.WriteLine("{0} altitude: {1}", flight2.CallSign, flight2.Altitude);
-            Console.WriteLine("{0} altitude: {1}", flight3.CallSign, flight3.Altitude);
-            Console.ReadLine();
         }
     }
 }

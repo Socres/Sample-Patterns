@@ -8,16 +8,19 @@
         static void Main()
         {
             var organization = BuildOrganization();
-            Console.WriteLine("Enter profit:");
-            var profitString = Console.ReadLine();
-            Console.WriteLine("**********");
-            double profit;
-            if (double.TryParse(profitString, out profit))
+            var profitString = "0";
+            while (!string.IsNullOrEmpty(profitString))
             {
-                organization.ProfitShare = profit;
-                organization.Stats();
+                Console.WriteLine("Enter profit:");
+                profitString = Console.ReadLine();
+                double profit;
+                if (double.TryParse(profitString, out profit))
+                {
+                    organization.ProfitShare = profit;
+                    organization.Stats();
+                }
+                Console.WriteLine("**********");
             }
-            Console.ReadLine();
         }
 
         private static IOrganizationUnit BuildOrganization()
