@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.31101.0
+# Visual Studio 15
+VisualStudioVersion = 15.0.27428.2027
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SamplePatterns.Mediator", "src\SamplePatterns.Mediator\SamplePatterns.Mediator.csproj", "{30D4D4B5-39B5-4BAE-A6A9-76B673E5D0D7}"
 EndProject
@@ -17,7 +17,23 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SamplePatterns.ChainOfRespo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SamplePatterns.Composite", "src\SamplePatterns.Composite\SamplePatterns.Composite.csproj", "{ED9D5FAF-D95D-4CB4-8F38-23F890168B21}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SamplePattern.SharedProjects", "SamplePattern.SharedProjects", "{367C7CC5-FF01-4C56-BAFC-04157972A04E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassLibrary_A", "src\SamplePattern.SharedProjects\ClassLibrary_A\ClassLibrary_A.csproj", "{1B9EE2FA-823B-4B62-8045-CAB59482506A}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "ClassLibrary_SharedA", "src\SamplePattern.SharedProjects\SharedProject_A\ClassLibrary_SharedA.shproj", "{451E468C-6399-4C2C-8803-24F224955B6D}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "ClassLibrary_SharedB", "src\SamplePattern.SharedProjects\SharedProject_B\ClassLibrary_SharedB.shproj", "{2D1755E5-EAB9-4BC1-9314-9579E3708D8C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApp_SharedProjects", "src\SamplePattern.SharedProjects\ConsoleApp_SharedProjects\ConsoleApp_SharedProjects.csproj", "{ED3E81A8-FBD4-41BB-AA10-08B962972BB6}"
+EndProject
 Global
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		src\SamplePattern.SharedProjects\SharedProject_A\SharedProject_A.projitems*{1b9ee2fa-823b-4b62-8045-cab59482506a}*SharedItemsImports = 4
+		src\SamplePattern.SharedProjects\SharedProject_B\SharedProject_B.projitems*{1b9ee2fa-823b-4b62-8045-cab59482506a}*SharedItemsImports = 4
+		src\SamplePattern.SharedProjects\SharedProject_B\SharedProject_B.projitems*{2d1755e5-eab9-4bc1-9314-9579e3708d8c}*SharedItemsImports = 13
+		src\SamplePattern.SharedProjects\SharedProject_A\SharedProject_A.projitems*{451e468c-6399-4c2c-8803-24f224955b6d}*SharedItemsImports = 13
+	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
@@ -51,8 +67,25 @@ Global
 		{ED9D5FAF-D95D-4CB4-8F38-23F890168B21}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{ED9D5FAF-D95D-4CB4-8F38-23F890168B21}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{ED9D5FAF-D95D-4CB4-8F38-23F890168B21}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1B9EE2FA-823B-4B62-8045-CAB59482506A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1B9EE2FA-823B-4B62-8045-CAB59482506A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1B9EE2FA-823B-4B62-8045-CAB59482506A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1B9EE2FA-823B-4B62-8045-CAB59482506A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ED3E81A8-FBD4-41BB-AA10-08B962972BB6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ED3E81A8-FBD4-41BB-AA10-08B962972BB6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ED3E81A8-FBD4-41BB-AA10-08B962972BB6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ED3E81A8-FBD4-41BB-AA10-08B962972BB6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{1B9EE2FA-823B-4B62-8045-CAB59482506A} = {367C7CC5-FF01-4C56-BAFC-04157972A04E}
+		{451E468C-6399-4C2C-8803-24F224955B6D} = {367C7CC5-FF01-4C56-BAFC-04157972A04E}
+		{2D1755E5-EAB9-4BC1-9314-9579E3708D8C} = {367C7CC5-FF01-4C56-BAFC-04157972A04E}
+		{ED3E81A8-FBD4-41BB-AA10-08B962972BB6} = {367C7CC5-FF01-4C56-BAFC-04157972A04E}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {12A63E97-3FC1-4891-A52C-CC43918EF4DC}
 	EndGlobalSection
 EndGlobal

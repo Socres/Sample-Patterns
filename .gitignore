@@ -13,3 +13,7 @@ _ReSharper.*
 *.userprefs
 *.*sdf
 /*.vspx
+/.vs/SamplePatterns/v15/Server/sqlite3/storage.ide-wal
+/.vs/SamplePatterns/v15/Server/sqlite3/storage.ide-shm
+/.vs/SamplePatterns/v15/Server/sqlite3/storage.ide
+/.vs/SamplePatterns/v15/Server/sqlite3/db.lock
